@@ -1,1 +1,1 @@
-# protobuf-permission-options
+# protoprivileges
