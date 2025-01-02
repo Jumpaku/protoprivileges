@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package jumpaku.privileges.v1;
+
+import "google/protobuf/descriptor.proto";
+
+message Privileges {
+  // The privilege is a list of required actions for a resource.
+  message Privilege {
+    string resource = 1;
+    repeated string actions = 2;
+  }
+  // A list of permissions associated with the requirement.
+  // Each permission specifies a resource and the actions allowed on that resource.
+  repeated Privilege required = 1;
+}
+
+extend google.protobuf.MethodOptions {
+  Privileges privileges = 50000;
+}

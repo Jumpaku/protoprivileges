@@ -1,0 +1,7 @@
+version: v2
+lint:
+  use:
+    - STANDARD
+modules:
+  - path: ./protobuf
+    name: buf.build/jumpaku/privileges
