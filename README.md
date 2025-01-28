@@ -2,8 +2,6 @@
 
 `protoprivileges` provides a custom option to declare privileges required to process service methods.
 
-https://buf.build/jumpaku/privileges
-
 
 ## Usage with an example
 
@@ -45,4 +43,10 @@ func main() {
 }
 ```
 
-The full version of the above code fragments can be found in the [example](example) directory.
+The full version of the above code fragments can be found in the https://github.com/Jumpaku/protoprivileges/tree/main/example .
+
+
+## References
+
+https://buf.build/jumpaku/privileges
+https://github.com/Jumpaku/protoprivileges
