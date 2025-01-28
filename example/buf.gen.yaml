@@ -4,11 +4,13 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: 'github.com/Jumpaku/protoprivileges/gen/pb'
+      value: 'example/gen/pb'
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.36.1
     out: gen/pb
     opt:
       - paths=source_relative
-inputs:
-  - directory: ./protobuf
+  - remote: buf.build/grpc/go:v1.5.1
+    out: gen/pb
+    opt:
+      - paths=source_relative

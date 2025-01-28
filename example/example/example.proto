@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package example;
+
+import "jumpaku/privileges/v1/privileges.proto";
+message Req {}
+message Res {}
+service ExampleService {
+  rpc UpdateExample(Req) returns (Res) {
+    option (jumpaku.privileges.v1.privileges) = {
+      required: [
+        {
+          resource: "example"
+          actions: ["read", "write"]
+        }
+      ]
+    };
+  }
+}
