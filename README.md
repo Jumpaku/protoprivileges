@@ -48,5 +48,5 @@ The full version of the above code fragments can be found in the https://github.
 
 ## References
 
-https://buf.build/jumpaku/privileges
-https://github.com/Jumpaku/protoprivileges
+- https://buf.build/jumpaku/privileges
+- https://github.com/Jumpaku/protoprivileges
