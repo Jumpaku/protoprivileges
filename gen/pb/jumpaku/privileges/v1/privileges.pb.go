@@ -23,8 +23,7 @@ const (
 
 type Privileges struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
-	// A list of permissions associated with the requirement.
-	// Each permission specifies a resource and the actions allowed on that resource.
+	// A list of privileges required to process a method.
 	Required      []*Privileges_Privilege `protobuf:"bytes,1,rep,name=required,proto3" json:"required,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache

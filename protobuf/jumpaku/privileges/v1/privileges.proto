@@ -10,8 +10,7 @@ message Privileges {
     string resource = 1;
     repeated string actions = 2;
   }
-  // A list of permissions associated with the requirement.
-  // Each permission specifies a resource and the actions allowed on that resource.
+  // A list of privileges required to process a method.
   repeated Privilege required = 1;
 }
 
