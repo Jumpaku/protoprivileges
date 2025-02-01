@@ -4,16 +4,29 @@ package jumpaku.privileges.v1;
 
 import "google/protobuf/descriptor.proto";
 
+// Privileges is a list of required privileges for a method.
 message Privileges {
-  // The privilege is a list of required actions for a resource.
+  // Privilege is can be consists of:
+  //  - required actions for a resource
+  //  - a required role
   message Privilege {
     string resource = 1;
     repeated string actions = 2;
+    string role = 3;
   }
   // A list of privileges required to process a method.
   repeated Privilege required = 1;
 }
 
+// Roles is a list of required roles for a service.
+message Roles {
+  repeated string required = 1;
+}
+
 extend google.protobuf.MethodOptions {
   Privileges privileges = 50000;
+}
+
+extend google.protobuf.ServiceOptions {
+  Roles roles = 50000;
 }

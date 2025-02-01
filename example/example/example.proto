@@ -6,6 +6,9 @@ import "jumpaku/privileges/v1/privileges.proto";
 message Req {}
 message Res {}
 service ExampleService {
+  option (jumpaku.privileges.v1.roles) = {
+    required: ["admin"]
+  };
   rpc UpdateExample(Req) returns (Res) {
     option (jumpaku.privileges.v1.privileges) = {
       required: [
